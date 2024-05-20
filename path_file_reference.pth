@@ -1,0 +1,26 @@
+#Command Scripts
+#   '#' at column 0 of the line means the line is comment line
+#Dimension data format
+#   DIM w,h    --  Set the size of base
+#line
+#   LINE sx sy ex ey -- Line connecting [sx,sy] and [ex,ey]
+#   LINETO ex ey    -- Line from current position to [ex,ey]
+#bridge  -- bridge is a line with uncut part at the bottom
+#   BRGTO ex ey    -- Bridge from current position to [ex,ey]
+#   BRGPR height length -- Set bridge height and length
+#Arc 
+#   ARC sx sy mx my ex ey  -- Arc connecting [sx,sy], [mx,my], [ex,ey] in sequence
+#   ARCTO mx my ex ey     -- Arc commecting current point, [mx,my], [ex,ey] in sequence
+#Interpolation
+#   INTER [x1, y1] [x2, y2] ... [xn, yn] - generate interpolation points connecting all the points
+#   NEW ex ey  -- Jump to [ex,ey] to begin new segment 
+#Following is an example of command script
+LINE	-200	-100	-200	0
+ARCTO	0	200	200	0
+LINETO	200	-100		
+LINETO	-200	-100		
+				
+				
+				
+				
+			
