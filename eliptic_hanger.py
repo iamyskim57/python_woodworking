@@ -90,7 +90,7 @@ def generate_eliptic_hanger(points,tool_radius,slot_width,margin):
     retpoints.append(retpoints[0])
     return(retpoints)
 
-def eliptic_hanger():
+if __name__ == '__main__':
     from tkinter import filedialog
     a, b, points = eliptic_perimeter_points(5, 3, 10000, 48, 1440)
     point_graph(points)
@@ -101,8 +101,3 @@ def eliptic_hanger():
     fp = open(file_path, "w")
     fp.write(str(fixpoints))
     fp.close()
-if __name__ == '__main__':
-    a, b, points = eliptic_perimeter_points(5, 3, 10000, 48, 1440)
-    point_graph(points)
-    fixpoints=eliptic_hanger(points,2,8,1)
-    point_graph(fixpoints)
