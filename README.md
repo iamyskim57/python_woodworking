@@ -5,3 +5,5 @@ Woodmeister 는 Python 을 기반으로 새로이 만들어진 CAD program입니
 시작을 위하여 아래의 link 에서 woodmeister 설치 package 를 다운로드하여 설치하세요.
 https://drive.google.com/file/d/1yVkq619C6AaUiWdY3yj3SCyzQCLiAknR/view?usp=sharing
 
+아래의 Link 에서 Woodmeister 사용설명서 및 Woodmeister 와 coding 을 합작을 통한 다양한 작업 정보를 얻을 수 있습니다.
+https://github.com/iamyskim57/manual_documents
