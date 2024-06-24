@@ -91,10 +91,16 @@ def generate_eliptic_hanger(points,tool_radius,slot_width,margin):
     return(retpoints)
 
 def eliptic_hanger():
+    from tkinter import filedialog
     a, b, points = eliptic_perimeter_points(5, 3, 10000, 48, 1440)
     point_graph(points)
     fixpoints=generate_eliptic_hanger(points,2,8,1)
     point_graph(fixpoints)
+    file_path = filedialog.asksaveasfilename(defaultextension=".pts",
+        filetypes=[("pointlist files", "*.pts")])  # 파일 탐색기를 열고 파일 경로를 얻음.
+    fp = open(file_path, "w")
+    fp.write(str(fixpoints))
+    fp.close()
 if __name__ == '__main__':
     a, b, points = eliptic_perimeter_points(5, 3, 10000, 48, 1440)
     point_graph(points)
