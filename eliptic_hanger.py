@@ -73,12 +73,9 @@ def generate_eliptic_hanger(points,tool_radius,slot_width,margin):
     for point in points:
         print("POINT:",point)
         norm = [point[0]-old_point[0],point[1]-old_point[1]]
-
         length = math.sqrt(norm[0]**2 + norm[1]**2)
         norm = [norm[0]/length, norm[1]/length]
-       # [dir,norm] = vector_oper.direction_and_normal_vector([0,0],point,"L")
         dir = vector_oper.rotation_2D(norm,-90)
-
         print("DIR NORM ", dir, norm)
         root_point = vector_oper.linear_sum(point,1,dir,-depth+tool_radius)
         left_root = vector_oper.linear_sum(root_point,1,norm,offset_norm)
@@ -98,7 +95,6 @@ def generate_eliptic_hanger(points,tool_radius,slot_width,margin):
         old_point = point
     retpoints.append(retpoints[0])
     return(retpoints)
-
 
 if __name__ == '__main__':
     from tkinter import filedialog
