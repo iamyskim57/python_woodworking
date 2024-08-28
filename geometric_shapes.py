@@ -65,11 +65,16 @@ data_edge = {"SHAPE":"EDGE", "TOP_SURFACE": 0, "HEIGHT":10, "RETRACT":10,
 data_planar_surface = {"SHAPE":"PLANAR_SURFACE", "TOP_SURFACE": -5,
       "P1":[0,45], "P2":[400,240], "TOOL_NUMBER":0, "PLANE":"TOP",
       "Z_home":20, "CENTER":[0,0]}
+
+data_gcode = {"PLANE":"TOP", "SHAPE":"GCODE", "CENTER":[0,0],
+    "TOOL_NUMBER":0, "COORDS":[],"SEQ":-1, "MESSAGE":'',"NCFILE":''}    # "NCFILE contains name of original gcode
+
 shape_map = {"BASE":data_base, "LINE":data_line, "PLANAR_SURFACE":data_planar_surface,
              "EDGE":data_edge, "RIDGE":data_ridge, "TRENCH":data_trench,
              "CIRCULAR_POST":data_circular_post, "POLYGON_POST":data_polygon_post,
              "CIRCULAR_HOLE":data_circular_hole, "POLYGON_HOLE":data_polygon_hole, "RECT_POST":data_rectangular_post, "RECT_HOLE":data_rectangular_hole,
-             "ARC":data_arc, "MULTI_TRENCH":data_multi_trench, "SIDE_TRENCH":data_side_trench, "DRILL": data_drill, "REF_LINE": data_ref_line, "CURVE":data_curve}
+             "ARC":data_arc, "MULTI_TRENCH":data_multi_trench, "SIDE_TRENCH":data_side_trench, "DRILL": data_drill, "REF_LINE": data_ref_line,
+             "CURVE":data_curve,"GCODE":data_gcode}
 def object_template(shape):
     """
     return template of object
@@ -108,6 +113,10 @@ def object_template(shape):
         object = copy.deepcopy(data_side_trench)
     elif shape == "CURVE":
         object = copy.deepcopy(data_curve)
+    elif shape == "REF_LINE":
+        object = copy.deepcopy(data_ref_line)
+    elif shape == "GCODE":
+        object = copy.deepcopy(data_gcode)
     return object
 def get_center(object):
     """
@@ -140,6 +149,9 @@ def get_center(object):
         center_x = object["CENTER"][0]
         center_y= object["CENTER"][1]
         center_z = float(object["TOP_SURFACE"]) - float(object["DEPTH"])
+    elif shape == "GCODE":
+        center_x = object["CENTER"][0]
+        center_y= object["CENTER"][1]
     elif shape != 'BASE' and shape != "REF_LINE":
         center_z = float(object["TOP_SURFACE"]) - float(object["DEPTH"])
     else:
@@ -147,5 +159,5 @@ def get_center(object):
     return [center_x, center_y, center_z]
 
 # sorting priority in generating tool path
-sorting_priority = ["BASE", "REF_LINE", "PLANAR_SURFACE", "DRILL", "CIRCULAR_HOLE", "POLYGON_HOLE", "RECT_HOLE", "TRENCH", "MULTI_TRENCH", "ARC", "EDGE", "CURVE", "RIDGE", "LINE", "CIRCULAR_POST", "POLYGON_POST","RECT_POST"]
+sorting_priority = ["BASE", "REF_LINE", "PLANAR_SURFACE", "DRILL", "CIRCULAR_HOLE", "POLYGON_HOLE", "RECT_HOLE", "TRENCH", "MULTI_TRENCH", "ARC", "EDGE", "CURVE", "RIDGE", "LINE", "CIRCULAR_POST", "POLYGON_POST","RECT_POST","GCODE"]
 
