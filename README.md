@@ -16,6 +16,11 @@ Woodmeister의 기본적인 기능 이외에 Python 프로그램을 합치면 �
 https://drive.google.com/file/d/1R0GfgHpLIW0DKOVRX1qBFvkPv2-yCXlY/view?usp=sharing
 
 Woodmeister 및 관련 프로그램에 대한 사용설명서 및 기타 관련 자료는 아래의 Link에서 구할 수 있습니다.
-또한 Woodmeister 와 coding 을 합작을 통한 다양한 작업 정보를 얻을 수 있습니다.
+
+이에는 Woodmeister 와 coding 을 합작을 통한 다양한 디자인 방법에 대한 정보도 포함되어 있습니다.
 
 https://github.com/iamyskim57/manual_documents
+
+목공 설계 및 제작의 신세계를 경험할 준비가 되었나요? 그럼 같이 시작하여 볼까요?
+
+
