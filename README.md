@@ -7,7 +7,7 @@ Woodmeister 는 Python 을 기반으로 새로이 만들어진 CAD program입니
 
 Woodmeister의 기본적인 기능 이외에 Python 프로그램을 합치면 여러분이 상상할 수 있는 범위까지 디자인의 영역이 넓어질 수 있습니다. 
 
-본 site 에서는 '목공과 Coding의 만남"이라는 주제로 Woodmeister 와 python coding 을 같이 사용함으로써 새로운 목공용 디자인을 할 수 있는 여러가지 방법에 대한 Coding 예 및 기본적인 프로그램을 제공하고 있습니다.
+본 사이트 에서는 '목공과 Coding의 만남"이라는 주제로 Woodmeister를 사용한 디자인은 물론 python coding 을 같이 사용함으로써 여러분만의 새로운 목공용 디자인을 할 수 있는 여러가지 방법에 대한 Coding 예 및 기본적인 프로그램을 제공하고 있습니다.
 
 시작을 위하여 아래의 link 에서 woodmeister 설치 package 를 다운로드하여 설치하세요.
 
